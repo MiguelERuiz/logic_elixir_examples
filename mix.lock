@@ -1,0 +1,3 @@
+%{
+  "logic_elixir": {:git, "git@github.com:manuelmontenegro/logic_elixir.git", "6ad7bd246b4d3fee461e00ff0cf6c58dc076af7d", [branch: "main"]},
+}
