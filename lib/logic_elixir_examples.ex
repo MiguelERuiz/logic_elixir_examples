@@ -101,8 +101,30 @@ defmodule LogicElixirExamples do
     siblings({:ground, x}, {:ground, y}).(%{}) |> Enum.into([]) == [%{}]
   end
 
-  def likes do
-    (findall {X, Y}, do: likes(X, Y)) |> Enum.into([])
-  end
+  def sorted?(xs) do
+		xs |> Enum.zip(tl(xs)) |> Enum.all?(fn {x, y} -> x <= y end)
+	end
+	# permutation(Xs, Zs) <->
+	#		Zs es una lista que resulta de permutar los elementos de Xs
+	# defpred permutation([], [])
+	# defpred permutation([X|Xs], Zs) do
+	# 	permutation(Xs, Xs1)
+	# 	insertion(X, Xs1, Zs)
+	# end
+
+	# ?- permutation([1, 2], L)
+	# L = [1, 2];
+	# L = [2, 1]
+
+	# permutation_sort(Xs, Zs) <->
+	#   Zs es la lista que resulta de permutar Xs
+	defpred permutation_sort(Xs, Zs) do
+		permutation(Xs, Zs)
+		@(sorted?(Zs))
+	end
+
+	def permutation_sort_fun(xs) do
+		(findall Zs, do: permutation_sort(xs, Zs)) |> Enum.take(1)
+	end
 
 end
