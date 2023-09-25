@@ -1,3 +1,3 @@
 %{
-  "logic_elixir": {:git, "git@github.com:manuelmontenegro/logic_elixir.git", "6ad7bd246b4d3fee461e00ff0cf6c58dc076af7d", [branch: "main"]},
+  "logic_elixir": {:git, "git@github.com:MiguelERuiz/logic_elixir.git", "9691cc9d228f7b94633bd4fc339c64be3b3baf91", [tag: "0.1.0"]},
 }

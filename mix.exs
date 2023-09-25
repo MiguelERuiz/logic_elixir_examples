@@ -21,9 +21,7 @@ defmodule LogicElixirExamples.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:logic_elixir, git: "git@github.com:manuelmontenegro/logic_elixir.git", branch: "main"}
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:logic_elixir, git: "git@github.com:MiguelERuiz/logic_elixir.git", tag: "0.1.0"}
     ]
   end
 end
